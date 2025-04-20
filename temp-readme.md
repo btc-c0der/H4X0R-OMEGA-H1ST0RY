@@ -30,8 +30,6 @@ This application is deployed on Hugging Face Spaces. You can access it here:
 - 🔧 **Converts standard markdown to hacker-styled manuscripts** with automatic "hackerization" of text
 - 💾 **Historical database of 90s hacking collectives** including MOD, CDC, L0pht, and LOD
 - 🇧🇷 **Brazilian hacker history module** featuring hacktivism in Brazil
-- 🔐 **L0pht Heavy Industries archive** with advisories and historical impact
-- 🏛️ **Web Archive NFT Museum** with quantum-preserved digital artifacts
 - 🌐 **Emoji-driven micro-modules** for topics like phreaking, BBS culture, and hacktivism
 - 🔐 **n3o matrix visualization** with dynamic code rain effects
 
@@ -50,15 +48,6 @@ Click any of the emoji buttons to load pre-configured markdown templates:
 - 💾 **BBS** - Bulletin Board System culture
 - ✊ **H4CKT1V1SM** - Origins of digital activism
 - 🇧🇷 **BR4Z1L13N H4X** - Brazilian hacker history
-- 🔐 **L0PHT** - L0pht Heavy Industries history
-- ⚠️ **L0PHT 4DV150RY** - Sample L0pht security advisory
-- 🏛️ **W3B 4RCH1V3 NFT** - Quantum-preserved hacker history artifacts
-
-### 📣 Special Features
-
-- **3CH0 L0PHT M3MB3R5** - Ceremonial acknowledgment of L0pht pioneers
-- **L0PHT H15T0RY Tab** - Timeline of key L0pht milestones
-- **NFT MU53UM Tab** - Collection of quantum-preserved historical artifacts
 
 ## 💻 Local Installation
 
@@ -80,7 +69,6 @@ Built with:
 - PIL for image generation
 - Custom CSS for the holographic interface
 - Python-based matrix effects
-- Modular architecture for expandable historical modules
 
 ## 📝 License
 
