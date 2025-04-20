@@ -22,7 +22,7 @@ A holographic touch-based UI for the OMEGA HACKER HISTORICAL MUSEUM, featuring a
 ## 🌐 Live Demo
 
 This application is deployed on Hugging Face Spaces. You can access it here:
-[H4X0R-OMEGA-H1ST0RY](https://huggingface.co/spaces/H4X0R-OMEGA-H1ST0RY)
+[H4X0R-OMEGA-H1ST0RY](https://huggingface.co/spaces/0M3G4-HACK3R/H4X0R-OMEGA-NEW)
 
 ## ✨ Features
 
