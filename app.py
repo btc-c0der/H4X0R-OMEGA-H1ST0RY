@@ -10,6 +10,10 @@ import io
 import os
 # Import Brazilian module
 from brazilian_module import get_br_hacker_data, get_br_template
+# Import L0pht module
+from lopht_module import get_lopht_data, get_lopht_template, get_lopht_advisory_template
+# Import Web Archive NFT Museum module
+from webarchive_nft_module import get_webarchive_nft_data, get_webarchive_nft_template, echo_lopht_members
 
 # Hacker group database for reference
 HACKER_GROUPS = {
@@ -53,6 +57,16 @@ for key, group in br_data["groups"].items():
         "members": ["Unknown"],  # Default members if not specified
         "era": group["era"]
     }
+
+# Update L0PHT with more detailed information from our module
+lopht_data = get_lopht_data()
+HACKER_GROUPS["L0PHT"] = {
+    "name": lopht_data["name"],
+    "emoji": lopht_data["emoji"],
+    "description": "Created L0phtCrack and testified to Congress in 1998",
+    "members": [member.split(" (")[0] for member in lopht_data["founders"][:5]],  # First 5 members
+    "era": lopht_data["years_active"]
+}
 
 # Hacker lingo transformation function
 def hackerize_text(text):
@@ -191,9 +205,18 @@ def create_ui():
                 # Add Brazilian module button
                 with gr.Row():
                     btn_brazil = gr.Button("🇧🇷 BR4Z1L13N H4X", elem_classes=["holographic-btn"])
+                    btn_lopht = gr.Button("🔐 L0PHT", elem_classes=["holographic-btn"])
+                
+                with gr.Row():
+                    btn_webarchive = gr.Button("🏛️ W3B 4RCH1V3 NFT", elem_classes=["holographic-btn"])
+                    btn_lopht_advisory = gr.Button("⚠️ L0PHT 4DV150RY", elem_classes=["holographic-btn"])
                 
                 group_info = gr.Markdown(elem_classes=["matrix-bg"])
                 
+                # Echo L0pht members button (ceremonial)
+                btn_echo_members = gr.Button("📣 3CH0 L0PHT M3MB3R5", elem_classes=["holographic-btn", "echo-btn"])
+                echo_output = gr.Markdown(elem_classes=["echo-output"])
+            
             with gr.Column(scale=2):
                 gr.Markdown("### <span class='emoji-icon'>📝</span> 3NT3R M4RKDOWN T3XT", elem_classes=["matrix-bg"])
                 markdown_input = gr.Textbox(
@@ -217,6 +240,31 @@ def create_ui():
                     ],
                     headers=["Year", "Operation", "Description"],
                     label="Brazilian Hacker Incidents"
+                )
+            
+            with gr.Tab("🕰️ L0PHT H15T0RY", elem_classes=["holo-tab"]):
+                # L0pht key achievements table
+                lopht_achievements = gr.DataFrame(
+                    value=[
+                        [achievement["year"], achievement["name"], achievement["description"]]
+                        for achievement in lopht_data["achievements"]
+                    ],
+                    headers=["Year", "Achievement", "Description"],
+                    label="L0pht Heavy Industries Milestones"
+                )
+                
+            with gr.Tab("🏛️ NFT MU53UM", elem_classes=["holo-tab"]):
+                webarchive_data = get_webarchive_nft_data()
+                nft_collections = gr.DataFrame(
+                    value=[
+                        [collection["name"], 
+                         collection.get("items", "N/A"), 
+                         collection.get("nft_contract", "N/A"), 
+                         collection.get("preservation_rating", "B")]
+                        for collection in webarchive_data["collections"]
+                    ],
+                    headers=["Collection", "Items", "NFT Contract", "Preservation Rating"],
+                    label="Quantum-Preserved NFT Collections (Target Year: 2420)"
                 )
         
         # Function to show group info when selected
@@ -285,6 +333,22 @@ Hacktivism combines hacking skills with political activism.
         def load_brazil_template():
             return get_br_template()
         
+        # Get template from L0pht module
+        def load_lopht_template():
+            return get_lopht_template()
+        
+        # Get template from L0pht Advisory module
+        def load_lopht_advisory_template():
+            return get_lopht_advisory_template()
+        
+        # Get template from Web Archive NFT Museum module
+        def load_webarchive_nft_template():
+            return get_webarchive_nft_template()
+        
+        # Echo L0pht members function
+        def acknowledge_lopht_members():
+            return echo_lopht_members()
+        
         # Connect UI components
         group_selector.change(
             update_group_info, 
@@ -317,6 +381,30 @@ Hacktivism combines hacking skills with political activism.
         btn_brazil.click(
             lambda: load_brazil_template(),
             outputs=[markdown_input]
+        )
+        
+        # Add L0pht module button functionality
+        btn_lopht.click(
+            lambda: load_lopht_template(),
+            outputs=[markdown_input]
+        )
+        
+        # Add L0pht Advisory button functionality
+        btn_lopht_advisory.click(
+            lambda: load_lopht_advisory_template(),
+            outputs=[markdown_input]
+        )
+        
+        # Add Web Archive NFT Museum button functionality
+        btn_webarchive.click(
+            lambda: load_webarchive_nft_template(),
+            outputs=[markdown_input]
+        )
+        
+        # Add Echo L0pht Members button functionality
+        btn_echo_members.click(
+            lambda: acknowledge_lopht_members(),
+            outputs=[echo_output]
         )
     
     return demo
