@@ -22,7 +22,7 @@ A holographic touch-based UI for the OMEGA HACKER HISTORICAL MUSEUM, featuring a
 ## 🌐 Live Demo
 
 This application is deployed on Hugging Face Spaces. You can access it here:
-[H4X0R-OMEGA-H1ST0RY](https://huggingface.co/spaces/btc-c0der/H4X0R-OMEGA-H1ST0RY)
+[H4X0R-OMEGA-H1ST0RY](https://huggingface.co/spaces/fartec0/H4X0R-OMEGA-H1ST0RY)
 
 ## ✨ Features
 
@@ -81,7 +81,7 @@ Perfect for celebrating your deployment or demonstrating classic hacker visual a
 
 ```bash
 # Clone the repository
-git clone https://huggingface.co/spaces/btc-c0der/H4X0R-OMEGA-H1ST0RY
+git clone https://huggingface.co/spaces/fartec0/H4X0R-OMEGA-H1ST0RY
 
 # Install dependencies
 pip install -r requirements.txt
