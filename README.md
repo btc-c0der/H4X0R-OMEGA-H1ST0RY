@@ -1,7 +1,7 @@
 ---
 title: H4X0R-OMEGA-H1ST0RY
 emoji: 💻
-colorFrom: black
+colorFrom: green
 colorTo: green
 sdk: gradio
 sdk_version: 4.12.0
