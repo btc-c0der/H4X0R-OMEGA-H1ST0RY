@@ -60,6 +60,23 @@ Click any of the emoji buttons to load pre-configured markdown templates:
 - **L0PHT H15T0RY Tab** - Timeline of key L0pht milestones
 - **NFT MU53UM Tab** - Collection of quantum-preserved historical artifacts
 
+## 🎉 C3L3BR4T10N SCR1PT
+
+Run the included ASCII art celebration script to commemorate your journey into hacker history:
+
+```bash
+python h4x0r_celebration.py
+```
+
+Features of the celebration script:
+- 🌧️ **Matrix-style rain animation** with falling characters
+- 🖼️ **ASCII art logos** for L0PHT and H4X0R-OMEGA 
+- 💬 **Famous hacker quotes** randomly selected
+- 🎭 **Retro terminal aesthetics** with glowing green text
+- 🔐 **Space deployment ceremony** with connection status
+
+Perfect for celebrating your deployment or demonstrating classic hacker visual aesthetics!
+
 ## 💻 Local Installation
 
 ```bash
@@ -81,6 +98,24 @@ Built with:
 - Custom CSS for the holographic interface
 - Python-based matrix effects
 - Modular architecture for expandable historical modules
+
+## 🧪 Testing & Troubleshooting
+
+The project includes test scripts to verify functionality:
+
+```bash
+# Test the manuscript generator
+python test_manuscript.py
+```
+
+The test script generates sample manuscripts with various test cases:
+- Simple text
+- Complex markdown with formatting
+- Group-themed content
+- Long text handling
+- Special characters and emoji support
+
+If you encounter rendering issues with the manuscript generator, the test script provides diagnostic information and generates sample output files for inspection.
 
 ## 📝 License
 
