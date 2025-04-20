@@ -7,7 +7,7 @@ Follow these steps to create and set up your Hugging Face Space:
 1. Go to [https://huggingface.co/spaces](https://huggingface.co/spaces)
 2. Click on "Create new Space"
 3. Enter the following details:
-   - Owner: btc-c0der
+   - Owner: fartec0
    - Space name: H4X0R-OMEGA-H1ST0RY
    - License: MIT
    - SDK: Gradio (or select the appropriate SDK for your application)
@@ -35,13 +35,13 @@ Follow these steps to create and set up your Hugging Face Space:
 Once you've created your Space, you'll need to push your code to it the first time:
 
 ```bash
-git remote add huggingface https://huggingface.co/spaces/btc-c0der/H4X0R-OMEGA-H1ST0RY
+git remote add huggingface https://huggingface.co/spaces/fartec0/H4X0R-OMEGA-H1ST0RY
 git push -f huggingface main
 ```
 
 ## 5. Verify Deployment
 
 After pushing your code:
-1. Visit your Space URL: [https://huggingface.co/spaces/btc-c0der/H4X0R-OMEGA-H1ST0RY](https://huggingface.co/spaces/btc-c0der/H4X0R-OMEGA-H1ST0RY)
+1. Visit your Space URL: [https://huggingface.co/spaces/fartec0/H4X0R-OMEGA-H1ST0RY](https://huggingface.co/spaces/fartec0/H4X0R-OMEGA-H1ST0RY)
 2. Wait for the build to complete (this may take a few minutes)
 3. Your app should now be live and public! 

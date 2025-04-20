@@ -149,7 +149,7 @@ def main():
     time.sleep(1)
     
     # Final message
-    print(f"\n{YELLOW}[*] {RESET}Connection established to: {CYAN}https://huggingface.co/spaces/btc-c0der/H4X0R-OMEGA-H1ST0RY{RESET}")
+    print(f"\n{YELLOW}[*] {RESET}Connection established to: {CYAN}https://huggingface.co/spaces/fartec0/H4X0R-OMEGA-H1ST0RY{RESET}")
     print(f"\n{YELLOW}[*] {RESET}Status: {GREEN}PUBLIC{RESET}")
     print(f"\n{YELLOW}[*] {GREEN}Hackers of the world, unite!{RESET}\n")
     

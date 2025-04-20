@@ -15,4 +15,4 @@ jobs:
       - name: Push to Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://btc-c0der:$HF_TOKEN@huggingface.co/spaces/btc-c0der/H4X0R-OMEGA-H1ST0RY main 
+        run: git push https://fartec0:$HF_TOKEN@huggingface.co/spaces/fartec0/H4X0R-OMEGA-H1ST0RY main 
